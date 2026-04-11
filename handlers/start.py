@@ -60,6 +60,9 @@ async def start_handler(client: Client, message: Message):
     # Check premium status for personalised greeting
     is_premium = await DB.is_premium(user.id)
     crown = "👑 " if is_premium else ""
+    
+    # [FIX APPLIED HERE]: Removed newline (\n) from inside the f-string curly braces
+    premium_note = "👑 You have **Premium** access!\n" if is_premium else ""
 
     welcome_text = (
         f"✨ **Welcome, {crown}{user.first_name}!**\n\n"
@@ -69,7 +72,7 @@ async def start_handler(client: Client, message: Message):
         "🔗 Send me a file link to download\n"
         "💎 Upgrade to **Premium** for extra perks\n"
         "━━━━━━━━━━━━━━━━━━━━\n\n"
-        f"{'👑 You have **Premium** access!\n' if is_premium else ''}"
+        f"{premium_note}"
         "👇 Choose an option below:"
     )
 
@@ -328,3 +331,4 @@ async def cb_verify_join(client: Client, cq: CallbackQuery):
         await handle_file_request(client, cq.message, file_id)
     else:
         await cq.answer("❌ You haven't joined yet!", show_alert=True)
+                         
