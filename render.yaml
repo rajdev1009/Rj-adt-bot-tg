@@ -1,0 +1,33 @@
+# render.yaml — Declarative deployment for Render.com
+# Deploy by connecting this repo to Render and it auto-detects this file.
+
+services:
+  - type: worker                        # Background worker, not a web server
+    name: telegram-filestore-bot
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: API_ID
+        sync: false                     # Fill in Render dashboard
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: MONGO_URL
+        sync: false
+      - key: NEON_URL
+        sync: false
+      - key: DB_CHANNEL
+        sync: false
+      - key: UPDATE_CHANNEL
+        sync: false
+      - key: ADMINS
+        sync: false
+      - key: SHORTENER_API
+        sync: false
+      - key: REQUEST_DELAY
+        value: "5"
+    disk:
+      name: sessions
+      mountPath: /app/sessions
+      sizeGB: 1

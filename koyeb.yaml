@@ -1,0 +1,34 @@
+# koyeb.yaml — Declarative deployment for Koyeb
+# Deploy with: koyeb app create --file koyeb.yaml
+
+name: telegram-filestore-bot
+
+services:
+  - name: bot
+    type: worker          # Long-running process (no HTTP port needed)
+    git:
+      repository: github.com/YOUR_USERNAME/telegram-filestore-bot
+      branch: main
+    build:
+      type: dockerfile
+      dockerfile: Dockerfile
+    env:
+      - name: API_ID
+        value: ""         # Fill via Koyeb dashboard secrets
+      - name: API_HASH
+        value: ""
+      - name: BOT_TOKEN
+        value: ""
+      - name: MONGO_URL
+        value: ""
+      - name: DB_CHANNEL
+        value: ""
+      - name: UPDATE_CHANNEL
+        value: ""
+      - name: ADMINS
+        value: ""
+    instance_types:
+      - type: nano         # Cheapest tier — works fine for bots
+    scaling:
+      min: 1
+      max: 1
