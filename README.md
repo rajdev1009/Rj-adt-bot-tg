@@ -450,7 +450,7 @@ Bot automatically premium check karta hai — expiry ke baad user regular ho jaa
 ### `/reset` Command:
 
 ```
-/reset 782447
+/reset 123456
 ```
 
 **Confirmation screen:**
@@ -595,7 +595,7 @@ A: Bot ko Update Channel ka Admin banana padega:
 A: `UPDATE_CHANNEL` mein numeric ID ki jagah `@username` use karo.
 ```
 UPDATE_CHANNEL=@raj_update_channel  ✅
-UPDATE_CHANNEL=-1003083333651       ❌
+UPDATE_CHANNEL=-100357883651       ❌
 ```
 
 ---
