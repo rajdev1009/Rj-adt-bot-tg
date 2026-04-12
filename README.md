@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.ibb.co/wNm5kJn4/1765831046347-2.jpg" width="120" height="120" style="border-radius: 50%;" alt="RAJ DEV"/>
+<img src="https://i.ibb.co/wNm5kJn4/1765831046347-2.jpg" width="200" height="200" style="border-radius: 50%;" alt="RAJ DEV"/>
 
 # 📦 Telegram File Store Bot
 
