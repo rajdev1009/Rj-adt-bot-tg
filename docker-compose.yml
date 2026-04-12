@@ -1,0 +1,29 @@
+# docker-compose.yml — Local development stack
+# Starts the bot + a local MongoDB instance together.
+# For production, use cloud MongoDB (Atlas) or NeonDB and set ENV vars.
+
+version: "3.9"
+
+services:
+  bot:
+    build: .
+    # on-failure: only restart if the process exits with a non-zero code.
+    # bot.py sleeps during FloodWait (exit code 0 eventually), so the
+    # container won't be restarted mid-cooldown and compound the flood timer.
+    restart: on-failure
+    env_file: .env
+    depends_on:
+      - mongo
+    volumes:
+      - ./sessions:/app/sessions   # persist Pyrogram session
+
+  mongo:
+    image: mongo:7.0
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"              # Exposed for local inspection
+
+volumes:
+  mongo_data:
