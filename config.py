@@ -63,17 +63,17 @@ class Config:
         "🥈 **Silver** — 1 Month\n"
         "   ✅ Bypass Shortener\n"
         "   ✅ Priority Delivery\n"
-        "   💰 Price: $X\n\n"
+        "   💰 Price: ₹30\n\n"
         "🥇 **Gold** — 3 Months\n"
         "   ✅ All Silver Benefits\n"
         "   ✅ Exclusive Content\n"
-        "   💰 Price: $Y\n\n"
-        "💎 **Diamond** — Lifetime\n"
+        "   💰 Price: ₹80\n\n"
+        "💎 **Diamond** — 1year\n"
         "   ✅ All Gold Benefits\n"
         "   ✅ VIP Support\n"
-        "   💰 Price: $Z\n"
+        "   💰 Price: ₹500\n\n"
         "━━━━━━━━━━━━━━━━━━━━\n\n"
-        "📩 Contact: @YourUsername to purchase"
+        "📩 Contact: @raj_dev_01 to purchase"
     )
 
     # ── Validation ─────────────────────────────────────────────
