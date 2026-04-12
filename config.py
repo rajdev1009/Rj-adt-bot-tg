@@ -99,7 +99,7 @@ class Config:
         "  • Link shortener bypass\n"
         "  • Priority file delivery\n"
         "  • Exclusive content access\n\n"
-        "💬 Support: @YourSupportGroup\n\n"
+        "💬 Support: @raj_support_group\n\n"
         "🔖 _Powered by **RAJ DEV**_"
     )
 
@@ -119,7 +119,7 @@ class Config:
         "   ✅ VIP Support\n"
         "   💰 Price: ₹159\n"
         "━━━━━━━━━━━━━━━━━━━━\n\n"
-        "📩 Purchase ke liye contact: @YourUsername\n\n"
+        "📩 Purchase ke liye contact: @raj_dev_01\n\n"
         "🔖 _Powered by **RAJ DEV**_"
     )
 
