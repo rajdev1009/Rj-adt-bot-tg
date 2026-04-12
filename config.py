@@ -19,7 +19,7 @@ class Config:
     # DB_CHANNEL: Private channel where files are stored (forward source)
     DB_CHANNEL: int = int(os.environ.get("DB_CHANNEL", 0))
     # UPDATE_CHANNEL: Public channel where file posts are announced
-    UPDATE_CHANNEL: str = os.environ.get("UPDATE_CHANNEL", "")  # e.g. "@MyChannel"
+    UPDATE_CHANNEL: str = os.environ.get("UPDATE_CHANNEL", "@raj_update_channel")  # e.g. "@MyChannel"
 
     # ── Admins ─────────────────────────────────────────────────
     # Comma-separated Telegram user IDs, e.g. "123456789,987654321"
@@ -54,7 +54,7 @@ class Config:
         "  • Bypass link shortener\n"
         "  • Priority file delivery\n"
         "  • Exclusive content access\n\n"
-        "💬 Support: @YourSupportGroup"
+        "💬 Support: @raj_support_group"
     )
 
     DEFAULT_PREMIUM_TEXT: str = (
