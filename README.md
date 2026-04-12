@@ -138,7 +138,7 @@ cp .env.example .env
 | `SHORTENER_API` | *(empty)* | Link shortener API key |
 | `SHORTENER_SITE` | `api.shrtco.de` | Shortener domain |
 | `REQUEST_DELAY` | `5` | Anti-spam delay seconds between requests |
-| `DELETE_PASSWORD` | `782447` | Password for `/reset` command |
+| `DELETE_PASSWORD` | `123456` | Password for `/reset` command |
 | `UPDATE_CHANNEL_USERNAME` | *(empty)* | Channel username for buttons (agar numeric ID use kar rahe ho) |
 | `PORT` | `8080` | Health check server port |
 
